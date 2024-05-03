@@ -26,6 +26,36 @@ class FormularioClientes:
             # Establece el título de la ventana principal
             base.title("Formulario Python")
 
+            groupBox = LabelFrame(
+                base, text="Datos del Personal", padx=5, pady=5)
+            groupBox.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
+
+            labelId = Label(groupBox, text="Id:", width=13,
+                            font=("Arial", 12)).grid(row=0, column=0)
+            texBoxId = Entry(groupBox)
+            texBoxId.grid(row=0, column=1)
+
+            labelNombres = Label(groupBox, text="Nombres:", width=13,
+                                 font=("Arial", 12)).grid(row=1, column=0)
+            texBoxId = Entry(groupBox)
+            texBoxId.grid(row=1, column=1)
+
+            labelApellidos = Label(groupBox, text="Apellidos:", width=13,
+                                   font=("Arial", 12)).grid(row=2, column=0)
+            texBoxId = Entry(groupBox)
+            texBoxId.grid(row=2, column=1)
+
+            labelSexo = Label(groupBox, text="Sexo:", width=13,
+                              font=("Arial", 12)).grid(row=3, column=0)
+            texBoxId = Entry(groupBox)
+            texBoxId.grid(row=3, column=1)
+
+            seleccionSexo = tk.StringVar()
+            combo = ttk.Combobox(
+                groupBox, values=["Masculino", "Femenino"], textvariable=seleccionSexo)
+            combo.grid(row=3, column=1)
+            seleccionSexo.set("Masculino")
+
             # Inicia el bucle principal de la aplicación tkinter para que la ventana se mantenga abierta
             base.mainloop()
 
