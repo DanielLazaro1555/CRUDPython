@@ -1,3 +1,5 @@
+#Proyecto de Python con MySQL - https://www.youtube.com/watch?v=Ro2m95m8QkI&t=1748s
+
 # Importa el módulo tkinter y lo renombra como tk
 import tkinter as tk
 
